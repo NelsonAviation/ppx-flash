@@ -1,0 +1,17 @@
+{
+  "name": "PinPointX-Lite CrowPanel",
+  "version": "1.0.0",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "bins/bootloader-crowpanel.bin",      "offset": 0           },
+        { "path": "bins/partition-table-crowpanel.bin", "offset": 32768       },
+        { "path": "bins/ota_data_initial.bin",          "offset": 57344       },
+        { "path": "bins/ppx_crowpanel.bin",             "offset": 65536       },
+        { "path": "bins/srmodels.bin",                  "offset": 12648448    }
+      ]
+    }
+  ]
+}

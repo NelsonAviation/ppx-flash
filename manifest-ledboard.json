@@ -1,0 +1,15 @@
+{
+  "name": "PinPointX-Lite LED Board",
+  "version": "1.0",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        { "path": "bins/ppx_ledboard_bootloader.bin",  "offset": 0      },
+        { "path": "bins/ppx_ledboard_partitions.bin",  "offset": 32768  },
+        { "path": "bins/ppx_ledboard.bin",             "offset": 65536  }
+      ]
+    }
+  ]
+}
