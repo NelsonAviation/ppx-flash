@@ -1,0 +1,12 @@
+[
+  {
+    "name": "DB78 78P Multifunction (V1)",
+    "subtitle": "Male/Female full-chain map · 2288 bytes",
+    "path": "bims/pcb_dsub_78p_multifunction.bims"
+  },
+  {
+    "name": "DB78 V2 SIM-A — 3×25 (4 connectors)",
+    "subtitle": "sim_a / sim_b / sim_c + composite · 4678 bytes · requires AT24C64",
+    "path": "bims/DB78_BIMS_V2_3X25_SIM.bims"
+  }
+]

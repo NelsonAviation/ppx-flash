@@ -48,6 +48,76 @@
       padding-top: 16px;
     }
     .note a { color: #3b82f6; text-decoration: none; }
+
+    .step-label {
+      font-size: 0.72rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 6px;
+    }
+    .step-title { font-size: 0.95rem; color: #f3f4f6; margin: 0 0 10px; }
+    .step-block {
+      border-top: 1px solid #1e1e1e;
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    .bims-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      background: #1a1a1a;
+    }
+    .bims-row .info { flex: 1; min-width: 0; }
+    .bims-row .name { color: #f3f4f6; font-size: 0.88rem; }
+    .bims-row .sub { color: #6b7280; font-size: 0.74rem; margin-top: 2px; }
+    .bims-row button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .bims-row button:hover { background: #1d4ed8; }
+    .bims-row button:disabled { background: #1f2937; color: #6b7280; cursor: not-allowed; }
+
+    #bims-progress {
+      display: none;
+      height: 6px;
+      background: #1f2937;
+      border-radius: 3px;
+      overflow: hidden;
+      margin: 12px 0 0;
+    }
+    #bims-progress .bar { height: 100%; background: #2563eb; width: 0%; transition: width 0.1s; }
+
+    #bims-log {
+      display: none;
+      background: #0a0a0a;
+      color: #cbd5e1;
+      font-family: ui-monospace, "JetBrains Mono", Menlo, monospace;
+      font-size: 0.72rem;
+      line-height: 1.45;
+      padding: 10px 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+      max-height: 240px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    #bims-log.error { color: #fca5a5; }
+    #bims-log.success { color: #86efac; }
   </style>
 </head>
 <body>
@@ -66,13 +136,125 @@
 
   <div class="board-card">
     <h2>LED Controller Board</h2>
-    <div class="meta">ESP32-C3 &nbsp;·&nbsp; v1.0</div>
+    <div class="meta">ESP32-C3 &nbsp;·&nbsp; v1.0 (production firmware)</div>
     <esp-web-install-button manifest="manifest-ledboard.json">
       <button slot="activate">Flash LED Board</button>
       <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
       <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
     </esp-web-install-button>
   </div>
+
+  <div class="board-card">
+    <h2>Write BIMS to a Hat EEPROM</h2>
+    <div class="meta">LED board (ESP32-C3) → AT24C64 I²C EEPROM</div>
+    <p style="font-size:0.82rem; color:#888; margin:0 0 14px;">
+      Two steps. The LED board runs a small <em>BIMS Programmer</em> sketch
+      that writes a manifest into the hat's EEPROM. When you're done, re-flash
+      the LED Controller Board card above to restore production firmware.
+    </p>
+
+    <div class="step-block" style="border-top:none; padding-top:0; margin-top:0;">
+      <p class="step-label">Step 1</p>
+      <p class="step-title">Flash the BIMS Programmer onto the LED board</p>
+      <esp-web-install-button manifest="manifest-bims-programmer.json">
+        <button slot="activate">Flash BIMS Programmer</button>
+        <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
+        <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
+      </esp-web-install-button>
+    </div>
+
+    <div class="step-block">
+      <p class="step-label">Step 2</p>
+      <p class="step-title">Pick a BIMS and write it to the hat EEPROM</p>
+      <div id="bims-list">
+        <div style="color:#6b7280; font-size:0.8rem;">Loading…</div>
+      </div>
+      <div id="bims-progress"><div class="bar"></div></div>
+      <pre id="bims-log"></pre>
+    </div>
+  </div>
+
+  <script type="module">
+    import { validateBims, pickPortAndFlash } from './bims_flash.js';
+
+    const listEl = document.getElementById('bims-list');
+    const progEl = document.getElementById('bims-progress');
+    const progBar = progEl.querySelector('.bar');
+    const logEl = document.getElementById('bims-log');
+
+    function setLog(text, mode) {
+      logEl.style.display = 'block';
+      logEl.className = mode || '';
+      logEl.textContent = text;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+    function appendLog(line) {
+      logEl.style.display = 'block';
+      logEl.textContent += line + '\n';
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    async function loadList() {
+      try {
+        const idx = await fetch('bims/index.json', { cache: 'no-cache' }).then(r => r.json());
+        listEl.innerHTML = '';
+        for (const entry of idx) {
+          const row = document.createElement('div');
+          row.className = 'bims-row';
+          row.innerHTML = `
+            <div class="info">
+              <div class="name"></div>
+              <div class="sub"></div>
+            </div>
+            <button>Flash</button>
+          `;
+          row.querySelector('.name').textContent = entry.name;
+          row.querySelector('.sub').textContent  = entry.subtitle || '';
+          const btn = row.querySelector('button');
+          btn.addEventListener('click', () => onFlash(entry, btn));
+          listEl.appendChild(row);
+        }
+      } catch (e) {
+        listEl.innerHTML = `<div style="color:#f87171; font-size:0.82rem;">Failed to load BIMS index: ${e.message}</div>`;
+      }
+    }
+
+    async function onFlash(entry, btn) {
+      const allBtns = listEl.querySelectorAll('button');
+      allBtns.forEach(b => b.disabled = true);
+      logEl.className = '';
+      logEl.textContent = '';
+      progEl.style.display = 'block';
+      progBar.style.width = '0%';
+
+      try {
+        appendLog(`Fetching ${entry.path}…`);
+        const data = new Uint8Array(await fetch(entry.path, { cache: 'no-cache' }).then(r => r.arrayBuffer()));
+
+        const v = validateBims(data);
+        appendLog(`Validation: ${v.message}`);
+        if (!v.ok) throw new Error(v.message);
+
+        await pickPortAndFlash(data, {
+          onLog: appendLog,
+          onProgress: (sent, total) => {
+            const pct = (sent * 100 / total).toFixed(0);
+            progBar.style.width = pct + '%';
+          },
+        });
+
+        logEl.className = 'success';
+        appendLog('\nDone. You can now disconnect and pair the hat with the controller.');
+      } catch (e) {
+        logEl.className = 'error';
+        appendLog('\nERROR: ' + (e.message || e));
+      } finally {
+        allBtns.forEach(b => b.disabled = false);
+      }
+    }
+
+    loadList();
+  </script>
 
   <p class="note">
     Requires Chrome 89+ or Edge 89+. Firefox and Safari are not supported.<br>
