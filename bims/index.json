@@ -25,8 +25,13 @@
     "path": "bims/db44_db50_combo_v2.bims"
   },
   {
-    "name": "DB62 / DB78 Combo (V2)",
-    "subtitle": "Male/Female · 140 pins · 144 LEDs · 6821 bytes · requires AT24C64",
+    "name": "DB62 / DB78 Combo (V2 — corrected DB62 female map)",
+    "subtitle": "Customer test · Male/Female · 140 pins · 144 LEDs · 6821 bytes · requires AT24C64",
+    "path": "bims/db62_db78_combo_corrected_v2.bims"
+  },
+  {
+    "name": "DB62 / DB78 Combo (V2 — original mapping)",
+    "subtitle": "For comparison · Male/Female · 140 pins · 144 LEDs · 6821 bytes · requires AT24C64",
     "path": "bims/db62_db78_combo_v2.bims"
   },
   {
