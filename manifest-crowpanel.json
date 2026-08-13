@@ -9,7 +9,7 @@
         { "path": "bins/bootloader-crowpanel.bin",      "offset": 0           },
         { "path": "bins/partition-table-crowpanel.bin", "offset": 32768       },
         { "path": "bins/ota_data_initial.bin",          "offset": 57344       },
-        { "path": "bins/ppx_crowpanel-1.2.5-d7b03fc3.bin", "offset": 65536    },
+        { "path": "bins/ppx_crowpanel-1.2.5-c02a37fa.bin", "offset": 65536    },
         { "path": "bins/srmodels.bin",                  "offset": 12648448    }
       ]
     }
