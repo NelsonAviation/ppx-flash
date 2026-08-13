@@ -3,17 +3,17 @@
 ## LED Controller Board 1.3.5 and CrowPanel 1.2.5 (2026-08-13)
 
 - Source: `NelsonAviation/Pinpoint` commit
-  `2f63ef759a02db6eb98774c5ce19e57bcc839e6a`, including
-  `c2afa76f`, `ccfb183e`, and `2f63ef75`.
-- LED application: `bins/ppx_ledboard-1.3.5.bin`
-  (`94a957247667df0add3c7b9034f5562ee3dfb2b8da94700ada5069eafd93b729`);
+  `d7b03fc3` (`fix firmware version reporting`), based on the valid-BIMS
+  enforcement work in `c2afa76f`, `ccfb183e`, and `2f63ef75`.
+- LED application: `bins/ppx_ledboard-1.3.5-d7b03fc3.bin`
+  (`fae5baa2d233cd2203b5be729315c85fed10119af83837b2e34b4ec4e2971ef2`);
   built for `esp32:esp32:esp32c3`.
-- CrowPanel application: `bins/ppx_crowpanel-1.2.5.bin`
-  (`64ee227faccc95965b866be9466ee634b5ad4aba937489e440656603cef778fe`);
+- CrowPanel application: `bins/ppx_crowpanel-1.2.5-d7b03fc3.bin`
+  (`c3634590e96bd234438ddc1b53badf3f62a192a42be1113bd86d53c929651b85`);
   built with ESP-IDF 5.4 for ESP32-S3.
-- Both manifests use versioned application filenames to prevent stale browser or
-  CDN responses. These are the normal production controller and CrowPanel
-  firmware builds; no simulated-invalid-BIMS test firmware is included.
+- Both manifests use commit-suffixed application filenames to prevent stale
+  browser or CDN responses. These are the validated, normal production builds
+  flashed successfully to the attached hardware.
 
 ## LED Controller Board 1.3.4 (2026-08-13)
 
