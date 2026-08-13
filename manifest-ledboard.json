@@ -1,6 +1,6 @@
 {
   "name": "PinPointX-Lite LED Board",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "new_install_prompt_erase": false,
   "builds": [
     {
@@ -9,7 +9,7 @@
         { "path": "bins/ppx_ledboard_bootloader.bin",  "offset": 0      },
         { "path": "bins/ppx_ledboard_partitions.bin",  "offset": 32768  },
         { "path": "bins/ota_data_ledboard.bin",         "offset": 57344  },
-        { "path": "bins/ppx_ledboard.bin",             "offset": 65536  }
+        { "path": "bins/ppx_ledboard-1.3.4.bin",       "offset": 65536  }
       ]
     }
   ]
