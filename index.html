@@ -25,6 +25,17 @@
     }
     .board-card h2 { font-size: 1.05rem; margin: 0 0 6px; color: #fff; }
     .board-card .meta { font-size: 0.8rem; color: #555; margin-bottom: 18px; }
+    .support-warning {
+      margin: 14px 0;
+      padding: 10px 12px;
+      border: 1px solid #b91c1c;
+      border-radius: 6px;
+      background: #2a1212;
+      color: #fecaca;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+    .support-warning strong { color: #fca5a5; }
     esp-web-install-button {
       --esp-tools-button-color: #2563eb;
       --esp-tools-button-text-color: #fff;
@@ -147,6 +158,7 @@
   <div class="board-card">
     <h2>Write BIMS to a Hat EEPROM</h2>
     <div class="meta">LED board (ESP32-C3) → AT24C64 I²C EEPROM</div>
+    <p class="support-warning"><strong>Support use only:</strong> Use this section only when directed by Nelson Aviation Support. Using it otherwise may cause issues with the LED Controller.</p>
     <p style="font-size:0.82rem; color:#888; margin:0 0 14px;">
       Two steps. The LED board runs a small <em>BIMS Programmer</em> sketch
       that writes a manifest into the hat's EEPROM. When you're done, re-flash
