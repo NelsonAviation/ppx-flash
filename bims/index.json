@@ -16,18 +16,18 @@
   },
   {
     "name": "DB25 / DB26 / DB37 Combo (V2)",
-    "subtitle": "Male/Female · 88 pins · 93 LEDs · 4453 bytes · requires AT24C64",
-    "path": "bims/db25_db26_db37_combo_v2.bims"
+    "subtitle": "Male/Female · 88 pins · 93 LEDs · 4465 bytes · requires AT24C64",
+    "path": "bims/db25_db26_db37_combo_v2.bims?v=7fce09e8"
   },
   {
     "name": "DB44 / DB50 Combo (V2)",
-    "subtitle": "Male/Female · 94 pins · 98 LEDs · 4672 bytes · requires AT24C64",
-    "path": "bims/db44_db50_combo_v2.bims"
+    "subtitle": "Male/Female · 94 pins · 98 LEDs · 4681 bytes · requires AT24C64",
+    "path": "bims/db44_db50_combo_v2.bims?v=0fcfd229"
   },
   {
     "name": "DB62 / DB78 Combo (V2 — corrected DB62 female map)",
-    "subtitle": "Customer test · Male/Female · 140 pins · 144 LEDs · 6821 bytes · requires AT24C64",
-    "path": "bims/db62_db78_combo_corrected_v2.bims"
+    "subtitle": "Customer test · Male/Female · 140 pins · 144 LEDs · 6830 bytes · requires AT24C64",
+    "path": "bims/db62_db78_combo_corrected_v2.bims?v=853b3a6a"
   },
   {
     "name": "DB62 / DB78 Combo (V2 — original mapping)",
