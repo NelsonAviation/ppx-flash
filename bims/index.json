@@ -31,17 +31,17 @@
   },
   {
     "name": "D38999 20WH55 (NA-LED-0086)",
-    "subtitle": "Male/Female · 55 pins · 55 LEDs · 2753 bytes",
-    "path": "bims/NA-LED-0086.bims"
+    "subtitle": "Male/Female · 55 pins · 55 LEDs · 2754 bytes",
+    "path": "bims/NA-LED-0086.bims?v=02eaba37"
   },
   {
     "name": "D38999 20WJ61 (NA-LED-0095)",
-    "subtitle": "Male/Female · 61 pins · 61 LEDs · 3035 bytes",
-    "path": "bims/NA-LED-0095.bims"
+    "subtitle": "Male/Female · 61 pins · 61 LEDs · 3036 bytes",
+    "path": "bims/NA-LED-0095.bims?v=c4ea7b07"
   },
   {
     "name": "MS3470W22-41S (NA-LED-0112)",
-    "subtitle": "Male/Female · 41 pins · 41 LEDs · 2101 bytes",
-    "path": "bims/NA-LED-0112.bims"
+    "subtitle": "Male/Female · 41 pins · 41 LEDs · 2114 bytes",
+    "path": "bims/NA-LED-0112.bims?v=1e1d6c09"
   }
 ]
