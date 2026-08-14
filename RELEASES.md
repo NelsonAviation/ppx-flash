@@ -1,5 +1,16 @@
 # Release artifacts
 
+## CrowPanel 1.2.5 — Nelson Aviation header logo (2026-08-13)
+
+- Source: `NelsonAviation/Pinpoint` branch `codex/pin-led-color-badge`, commit
+  `4ff990cf2ed0b8e3fc6d90d1e1261f35fbc98667`
+  (`feat: add Nelson Aviation header logo`).
+- CrowPanel application: `bins/ppx_crowpanel-1.2.5-4ff990cf.bin`
+  (`0d49ebf418973d90182fa0279b668aa740307ec35a7a3cdb4f06ea171e11ff3b`);
+  built with ESP-IDF 5.4 for ESP32-S3 and verified on hardware.
+- The commit-suffixed filename and manifest query prevent browsers and CDNs
+  from serving the prior CrowPanel application from cache.
+
 ## LED Controller Board 1.3.5 and CrowPanel 1.2.5 (2026-08-13)
 
 - Source: `NelsonAviation/Pinpoint` commit
