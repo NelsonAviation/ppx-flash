@@ -14,8 +14,25 @@
       background: #0f0f0f;
       color: #e0e0e0;
     }
-    h1 { font-size: 1.4rem; color: #fff; margin-bottom: 4px; }
-    .subtitle { color: #666; font-size: 0.85rem; margin-bottom: 40px; }
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .brand-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+    .page-header-copy { min-width: 0; }
+    h1 { font-size: 1.4rem; color: #fff; margin: 0 0 4px; }
+    .subtitle { color: #666; font-size: 0.85rem; margin: 0; }
+    @media (max-width: 480px) {
+      .page-header { gap: 12px; }
+      .brand-logo { width: 56px; height: 56px; }
+    }
     .board-card {
       border: 1px solid #2a2a2a;
       border-radius: 10px;
@@ -157,8 +174,13 @@
   </style>
 </head>
 <body>
-  <h1>PinPointX-Lite Firmware Flasher</h1>
-  <p class="subtitle">Use Chrome or Edge. Connect the board via USB before clicking Flash.</p>
+  <header class="page-header">
+    <img class="brand-logo" src="assets/nelson-aviation-logo.png" alt="Nelson Aviation">
+    <div class="page-header-copy">
+      <h1>PinPointX-Lite Firmware Flasher</h1>
+      <p class="subtitle">Use Chrome or Edge. Connect the board via USB before clicking Flash.</p>
+    </div>
+  </header>
 
   <div class="board-card">
     <h2>CrowPanel Touchscreen</h2>
