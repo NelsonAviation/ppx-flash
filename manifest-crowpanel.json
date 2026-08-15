@@ -1,6 +1,6 @@
 {
   "name": "PinPointX-Lite CrowPanel",
-  "version": "1.2.51",
+  "version": "1.2.56",
   "new_install_prompt_erase": false,
   "builds": [
     {
@@ -9,7 +9,7 @@
         { "path": "bins/bootloader-crowpanel.bin",      "offset": 0           },
         { "path": "bins/partition-table-crowpanel.bin", "offset": 32768       },
         { "path": "bins/ota_data_initial.bin",          "offset": 57344       },
-        { "path": "bins/ppx_crowpanel-1.2.51-4ff990cf.bin", "offset": 65536   },
+        { "path": "bins/ppx_crowpanel-1.2.56-ce2079c4.bin", "offset": 65536   },
         { "path": "bins/srmodels.bin",                  "offset": 12648448    }
       ]
     }

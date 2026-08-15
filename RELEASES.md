@@ -1,5 +1,18 @@
 # Release artifacts
 
+## CrowPanel 1.2.56 and LED Hub Controller 1.3.51 (2026-08-15)
+
+- Source: merged `NelsonAviation/Pinpoint` PR #14, commit
+  `ce2079c434562d96b425b2ba6e8f83e7a724cd97`.
+- CrowPanel application: `bins/ppx_crowpanel-1.2.56-ce2079c4.bin`
+  (`f51df39348d8db061c82c81e20252962f7cbd2cd59ed98353c41ef35bb1afe61`);
+  built with ESP-IDF 5.4 for ESP32-S3.
+- LED Hub Controller application: `bins/ppx_ledboard-1.3.51-ce2079c4.bin`
+  (`c381f99c8296b6901d336d7f6afad00c0f3a0e63f66f43490b168fae39178fb4`);
+  built for `esp32:esp32:esp32c3`.
+- Both manifests use commit-suffixed application filenames and query strings to
+  prevent stale browser or CDN responses.
+
 ## CrowPanel 1.2.51 — Nelson Aviation header logo (2026-08-13)
 
 - Source: `NelsonAviation/Pinpoint` branch `codex/pin-led-color-badge`, commit
