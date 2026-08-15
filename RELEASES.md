@@ -1,5 +1,15 @@
 # Release artifacts
 
+## LED Hub Controller 1.3.55 (2026-08-15)
+
+- Source: Pinpoint working tree based on `80e5ac5d4c7ec1febb2379f304d513084f24135c`,
+  with the requested `FW_PATCH` update to `55`.
+- Application: `bins/ppx_ledboard-1.3.55.bin`
+  (`d4baf54ea3ec807d6d30f5ab59b2636936297aa04c004e0cbb096fd30c2a0d8d`);
+  built for `esp32:esp32:esp32c3`.
+- The versioned application filename and manifest query prevent stale browser
+  or CDN responses.
+
 ## CrowPanel 1.2.56 and LED Hub Controller 1.3.51 (2026-08-15)
 
 - Source: merged `NelsonAviation/Pinpoint` PR #14, commit
