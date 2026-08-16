@@ -6,7 +6,9 @@
   Its verified no-voice package includes the final TEST UI with Slow, Medium,
   Fast, Insane, Repeat, and exclusive Blend/Blink All controls.
 - LED source: `Pinpoint/recovery_points/hub_release_v1.3.56_2026-08-15`.
-  The v1.3.56 image supports Insane, Blend, and Blink All TEST features.
+  The refreshed v1.3.56 image supports Insane, Blend, and Blink All TEST
+  features, with Blink All hard-capped at 5% brightness to protect the Hub
+  power supply.
 - The retained LED v1.3.55 flasher option now references the verified image in
   `Pinpoint/recovery_points/hub_current_build_2026-08-15`.
 - `CHECKSUMS.sha256` passed for all three source release directories before
