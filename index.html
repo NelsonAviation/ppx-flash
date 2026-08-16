@@ -194,19 +194,29 @@
 
   <div class="board-card">
     <h2>CrowPanel Touchscreen — No Voice</h2>
-    <div class="meta">v1.3.0 · Touchscreen-only firmware (no AI Voice or speech models)</div>
-    <esp-web-install-button manifest="manifest-crowpanel-no-voice.json?v=1.3.0">
-      <button slot="activate">Flash CrowPanel v1.3.0 (No Voice)</button>
+    <div class="meta">v1.3.1 · Touchscreen-only firmware with TEST controls (no AI Voice or speech models)</div>
+    <esp-web-install-button manifest="manifest-crowpanel-no-voice.json?v=1.3.1">
+      <button slot="activate">Flash CrowPanel v1.3.1 (No Voice)</button>
       <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
       <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
     </esp-web-install-button>
   </div>
 
   <div class="board-card">
-    <h2>LED Controller Board</h2>
-    <div class="meta">v1.3.55 (production firmware)</div>
-    <esp-web-install-button manifest="manifest-ledboard.json?v=1.3.55">
-      <button slot="activate">Flash LED Board</button>
+    <h2>LED Controller Board — Latest</h2>
+    <div class="meta">v1.3.56 · TEST supports Insane, Blend, and Blink All</div>
+    <esp-web-install-button manifest="manifest-ledboard-1.3.56.json?v=1.3.56">
+      <button slot="activate">Flash LED Board v1.3.56</button>
+      <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
+      <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
+    </esp-web-install-button>
+  </div>
+
+  <div class="board-card">
+    <h2>LED Controller Board — Retained Release</h2>
+    <div class="meta">v1.3.55 · Retained production image</div>
+    <esp-web-install-button manifest="manifest-ledboard.json?v=1.3.55-recovery">
+      <button slot="activate">Flash LED Board v1.3.55</button>
       <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
       <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
     </esp-web-install-button>

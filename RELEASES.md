@@ -1,5 +1,17 @@
 # Release artifacts
 
+## CrowPanel v1.3.1 No Voice and LED Hub Controller v1.3.56 (2026-08-15)
+
+- CrowPanel source: `Pinpoint/recovery_points/crowpanel_release_v1.3.1_2026-08-15`.
+  Its verified no-voice package includes the final TEST UI with Slow, Medium,
+  Fast, Insane, Repeat, and exclusive Blend/Blink All controls.
+- LED source: `Pinpoint/recovery_points/hub_release_v1.3.56_2026-08-15`.
+  The v1.3.56 image supports Insane, Blend, and Blink All TEST features.
+- The retained LED v1.3.55 flasher option now references the verified image in
+  `Pinpoint/recovery_points/hub_current_build_2026-08-15`.
+- `CHECKSUMS.sha256` passed for all three source release directories before
+  publication.
+
 ## CrowPanel v1.3.0 No Voice (2026-08-15)
 
 - Source: `Pinpoint/recovery_points/crowpanel_no_voice_v1.3.0_2026-08-15`.
