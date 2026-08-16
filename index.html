@@ -183,10 +183,20 @@
   </header>
 
   <div class="board-card">
-    <h2>CrowPanel Touchscreen</h2>
-    <div class="meta">v1.2.56 (production firmware)</div>
+    <h2>CrowPanel Touchscreen — AI Voice</h2>
+    <div class="meta">v1.2.56 · AI Voice enabled (includes speech models)</div>
     <esp-web-install-button manifest="manifest-crowpanel.json?v=1.2.56-ce2079c4">
-      <button slot="activate">Flash CrowPanel</button>
+      <button slot="activate">Flash CrowPanel v1.2.56 (AI Voice)</button>
+      <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
+      <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
+    </esp-web-install-button>
+  </div>
+
+  <div class="board-card">
+    <h2>CrowPanel Touchscreen — No Voice</h2>
+    <div class="meta">v1.3.0 · Touchscreen-only firmware (no AI Voice or speech models)</div>
+    <esp-web-install-button manifest="manifest-crowpanel-no-voice.json?v=1.3.0">
+      <button slot="activate">Flash CrowPanel v1.3.0 (No Voice)</button>
       <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
       <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
     </esp-web-install-button>

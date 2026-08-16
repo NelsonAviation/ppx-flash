@@ -1,5 +1,20 @@
 # Release artifacts
 
+## CrowPanel v1.3.0 No Voice (2026-08-15)
+
+- Source: `Pinpoint/recovery_points/crowpanel_no_voice_v1.3.0_2026-08-15`.
+- Application: `bins/ppx_crowpanel-no-voice-1.3.0.bin`
+  (`ee2ea1d7e1efa57bea0cedce36a8e108c337d840f972c9c8ecd01942d7fa1d93`).
+- This touchscreen-only ESP32-S3 layout contains bootloader, partition table,
+  OTA data, and application only. It deliberately does not write a speech-model
+  partition.
+
+## CrowPanel v1.2.56 AI Voice retained (2026-08-15)
+
+- Source: `Pinpoint/recovery_points/crowpanel_current_build_2026-08-15`.
+- The existing v1.2.56 option remains available with its required speech-model
+  partition at `0xC10000`.
+
 ## LED Hub Controller 1.3.55 (2026-08-15)
 
 - Source: Pinpoint working tree based on `80e5ac5d4c7ec1febb2379f304d513084f24135c`,
