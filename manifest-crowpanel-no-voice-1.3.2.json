@@ -1,15 +1,15 @@
 {
-  "name": "PinPointX-Lite CrowPanel — Low-Battery",
+  "name": "PinPointX-Lite CrowPanel — Display Settings",
   "version": "1.3.2",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-S3",
       "parts": [
-        { "path": "bins/bootloader-crowpanel-no-voice-1.3.2.bin", "offset": 0 },
-        { "path": "bins/partition-table-crowpanel-no-voice-1.3.2.bin", "offset": 32768 },
-        { "path": "bins/ota_data-crowpanel-no-voice-1.3.2.bin", "offset": 57344 },
-        { "path": "bins/ppx_crowpanel-no-voice-1.3.2.bin", "offset": 65536 }
+        { "path": "bins/bootloader-crowpanel-display-1.3.2.bin", "offset": 0 },
+        { "path": "bins/partition-table-crowpanel-display-1.3.2.bin", "offset": 32768 },
+        { "path": "bins/ota_data-crowpanel-display-1.3.2.bin", "offset": 57344 },
+        { "path": "bins/ppx_crowpanel-display-1.3.2.bin", "offset": 65536 }
       ]
     }
   ]
