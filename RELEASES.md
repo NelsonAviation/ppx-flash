@@ -1,5 +1,12 @@
 # Release artifacts
 
+## LED Hub Controller v1.3.57 (2026-08-24)
+
+- Source: active `Pinpoint/esp32_led_board` production build for ESP32-C3.
+- Application: `bins/ppx_ledboard-1.3.57.bin`
+  (`d7432c31655d41b23f0b475e109a77926e8fbc704bc7b9dac6c2aa60b86a7827`).
+- This replaces the v1.3.56 web-flash release. CrowPanel releases are unchanged.
+
 ## CrowPanel v1.3.2 Display Settings (2026-08-24)
 
 - Built from the active `Pinpoint/esp32_crowpanel_idf` source with ESP-IDF
