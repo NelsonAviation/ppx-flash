@@ -15,8 +15,9 @@
   brightness (Maximum battery duration) or High brightness (About 50% less
   battery duration) across reboot.
 - Wi-Fi starts two seconds after boot and remains continuous.
-- Application: `bins/ppx_crowpanel-display-1.3.2.bin`
-  (`a11c709b469d340ff0f2c74a919cc854fb1021d711ba4ee187210667be3d37a9`).
+- Includes the 2.5 ms touch-sound cue and Settings-header sound mute toggle.
+- Application: `bins/ppx_crowpanel-display-sound-1.3.2.bin`
+  (`cfd21085830d255ca818afc5f5cb35e1467ac34d8ed9b8e069e289fe76e32c4e`).
 - The web-flash page retains v1.3.1 as a separate selectable release.
 
 ## CrowPanel v1.3.1 No Voice and LED Hub Controller v1.3.56 (2026-08-15)
