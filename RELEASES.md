@@ -1,5 +1,16 @@
 # Release artifacts
 
+## CrowPanel v1.3.2 Low-Battery No Voice (2026-08-24)
+
+- Built from the active `Pinpoint/esp32_crowpanel_idf` source with ESP-IDF
+  5.4.2 for ESP32-S3 and hardware-tested on the attached CrowPanel.
+- Uses 25% panel brightness, starts Wi-Fi/ESP-NOW two seconds after boot, and
+  then retains the normal continuous ESP-NOW heartbeat. Wi-Fi transmit power
+  is capped at 2 dBm (approximately half the prior RF power).
+- Application: `bins/ppx_crowpanel-no-voice-1.3.2.bin`
+  (`7924ee8efffc8c8c6b64ea23cfe42454a9f87bfac01998027526b6b2c8538041`).
+- The web-flash page retains v1.3.1 as a separate selectable release.
+
 ## CrowPanel v1.3.1 No Voice and LED Hub Controller v1.3.56 (2026-08-15)
 
 - CrowPanel source: `Pinpoint/recovery_points/crowpanel_release_v1.3.1_2026-08-15`.
