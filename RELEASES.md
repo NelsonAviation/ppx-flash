@@ -1,5 +1,19 @@
 # Release artifacts
 
+## LED Hub Controller v1.3.59 and CrowPanel v1.3.4 (2026-08-25)
+
+- LED Hub Controller source: `NelsonAviation/Pinpoint` commit
+  `7052c4a9a127527a0953a4b673b579242c8d9646`
+  (`Stabilize hub battery charging status`). Built for ESP32-C3.
+  Application: `bins/ppx_ledboard-1.3.59.bin`
+  (`a59978b7404535a74d48e79603115b827df3183c6df9c9649965e322409fdafa`).
+- CrowPanel source: `NelsonAviation/Pinpoint` commit `5a2ae302`
+  (`Suspend Crow radio during display inactivity`). The committed validated
+  ESP32-S3 release build supplies `bins/ppx_crowpanel-no-voice-1.3.4.bin`
+  (`f51df39348d8db061c82c81e20252962f7cbd2cd59ed98353c41ef35bb1afe61`).
+- Both versions are added as independent choices; no existing web-flash
+  release has been removed or replaced.
+
 ## LED Hub Controller v1.3.57 (2026-08-24)
 
 - Source: active `Pinpoint/esp32_led_board` production build for ESP32-C3.
