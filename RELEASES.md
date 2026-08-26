@@ -1,5 +1,15 @@
 # Release artifacts
 
+## CrowPanel v1.3.5 (2026-08-25)
+
+- Source: current flashed `Pinpoint/esp32_crowpanel_idf` ESP32-S3 build,
+  embedded version `1.3.5`.
+- This release supersedes v1.3.4 as the latest CrowPanel choice. Touch blips
+  are limited to UI controls; v1.3.4 and all earlier CrowPanel releases remain
+  available as separate choices.
+- Application: `bins/ppx_crowpanel-1.3.5.bin`
+  (`05840bfe06c02b4f92e26d527adf21815de2c1256c5a3473304b1732a9c0ce29`).
+
 ## LED Hub Controller v1.3.60 (2026-08-25)
 
 - Source: `NelsonAviation/Pinpoint` commit
