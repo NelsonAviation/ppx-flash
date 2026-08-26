@@ -1,5 +1,17 @@
 # Release artifacts
 
+## LED Hub Controller v1.3.60 (2026-08-25)
+
+- Source: `NelsonAviation/Pinpoint` commit
+  `437d0a5f47384312681aae911a0ab9c81e9d012f` (`Release hub firmware v1.3.60`).
+- The ESP32-C3 release restores Blink All: every LED illuminates the same
+  color and the entire palette cycles together, while retaining the battery
+  and charging-status work.
+- Application: `bins/ppx_ledboard-1.3.60.bin`
+  (`7ac8f50e32fe1d4d9fcf14d2bc5c27036ffff260fd57742a2fe5caf267c6f148`).
+- v1.3.60 is the current/latest web-flash choice. v1.3.59 and all earlier Hub
+  releases remain available as separate choices.
+
 ## LED Hub Controller v1.3.59 and CrowPanel v1.3.4 (2026-08-25)
 
 - LED Hub Controller source: `NelsonAviation/Pinpoint` commit
