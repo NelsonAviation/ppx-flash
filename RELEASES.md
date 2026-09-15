@@ -1,5 +1,15 @@
 # Release artifacts
 
+## CrowPanel v1.3.6 (2026-09-15)
+
+- Source: verified customer package `PinPointX_CrowPanel_v1.3.6_Customer_Test.zip`
+  (`d748c13e61e3f4385e4e7aa13d1ebad4e9a2f0126500cefa948afe5d2d51d994`).
+- Target: ESP32-S3 CrowPanel Advance 7-inch N16R8. The verified application is
+  `bins/ppx_crowpanel-1.3.6.bin`
+  (`bed53a194661d05fbd33fe7240b7729c5182fddaaaa612d83d4ef8e1111bb8d6`).
+- v1.3.6 adds the Crowpanel SOC battery icon. It is a new selectable release;
+  all existing CrowPanel and Hub options remain available.
+
 ## CrowPanel v1.3.5 (2026-08-25)
 
 - Source: current flashed `Pinpoint/esp32_crowpanel_idf` ESP32-S3 build,
