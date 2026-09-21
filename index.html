@@ -183,8 +183,27 @@
   </header>
 
   <div class="board-card">
-    <h2>CrowPanel Touchscreen</h2>
-    <div class="meta">Choose a production firmware release</div>
+    <h2>Web UI Hub / LED Controller</h2>
+    <div class="meta">Browser-controlled Hub firmware · separate from CrowPanel-compatible firmware</div>
+    <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">
+      <p class="step-title">Web 0.5.5 · Latest</p>
+      <p class="step-label">Browser-based Pin and Wire control over local Wi-Fi</p>
+      <esp-web-install-button manifest="manifest-web-hub-0.5.5.json?v=web-0.5.5">
+        <button slot="activate">Flash Web UI Hub Web 0.5.5</button>
+        <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
+        <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
+      </esp-web-install-button>
+    </div>
+  </div>
+
+  <details class="board-card bims-card">
+    <summary aria-label="Toggle CrowPanel firmware releases">
+      <div>
+        <h2>CrowPanel Touchscreen</h2>
+        <div class="meta">Choose a production firmware release</div>
+      </div>
+    </summary>
+    <div class="bims-card-content">
     <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">
       <p class="step-title">v1.3.6 · Latest</p>
       <p class="step-label">Includes Crowpanel SOC battery icon</p>
@@ -239,26 +258,17 @@
         <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
       </esp-web-install-button>
     </div>
-  </div>
-
-  <div class="board-card">
-    <h2>Web UI Hub / LED Controller</h2>
-    <div class="meta">Browser-controlled Hub firmware · separate from CrowPanel-compatible firmware</div>
-    <p class="support-warning"><strong>Choose carefully:</strong> This firmware is controlled directly from its local Wi-Fi web interface. It does not communicate with the CrowPanel. Use the LED Controller Board panel below for CrowPanel-compatible firmware.</p>
-    <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">
-      <p class="step-title">Web 0.5.5 · Latest</p>
-      <p class="step-label">Browser-based Pin and Wire control over local Wi-Fi</p>
-      <esp-web-install-button manifest="manifest-web-hub-0.5.5.json?v=web-0.5.5">
-        <button slot="activate">Flash Web UI Hub Web 0.5.5</button>
-        <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
-        <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
-      </esp-web-install-button>
     </div>
-  </div>
+  </details>
 
-  <div class="board-card">
-    <h2>LED Controller Board</h2>
-    <div class="meta">Choose a production firmware release</div>
+  <details class="board-card bims-card">
+    <summary aria-label="Toggle CrowPanel-compatible LED Controller firmware releases">
+      <div>
+        <h2>LED Controller Board</h2>
+        <div class="meta">Choose a production firmware release</div>
+      </div>
+    </summary>
+    <div class="bims-card-content">
     <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">
       <p class="step-title">v1.3.60 · Latest</p>
       <p class="step-label">Blink All synchronizes every LED to the same cycling palette</p>
@@ -295,7 +305,8 @@
         <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
       </esp-web-install-button>
     </div>
-  </div>
+    </div>
+  </details>
 
   <details class="board-card bims-card">
     <summary aria-label="Toggle BIMS EEPROM support tools">
