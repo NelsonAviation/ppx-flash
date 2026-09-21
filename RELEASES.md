@@ -9,8 +9,9 @@
   key or a plaintext firmware image.
 - Existing plain Web 0.5.51 Hubs require private shop provisioning before they
   can consume this package. No raw Web Hub bootstrap image is published.
-- The prior unencrypted Web 0.5.51 page link and raw assets were removed from
-  the deployed tree. CrowPanel-compatible firmware options are unchanged.
+- The unencrypted Web 0.5.51 package is retained below the encrypted updater
+  as a temporary legacy raw-flash option. CrowPanel-compatible firmware options
+  are unchanged.
 
 ## CrowPanel v1.3.6 (2026-09-15)
 
