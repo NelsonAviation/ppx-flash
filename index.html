@@ -186,13 +186,13 @@
     <h2>Web UI Hub / LED Controller</h2>
     <div class="meta">Browser-controlled Hub firmware · separate from CrowPanel-compatible firmware</div>
     <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">
-      <p class="step-title">Web 0.5.51 · Latest</p>
-      <p class="step-label">Browser-based Pin and Wire control over local Wi-Fi</p>
-      <esp-web-install-button manifest="manifest-web-hub-0.5.51.json?v=web-0.5.51">
-        <button slot="activate">Flash Web UI Hub Web 0.5.51</button>
-        <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
-        <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
-      </esp-web-install-button>
+      <p class="step-title">Web 0.5.52-enc1 · Latest</p>
+      <p class="step-label">Encrypted browser-based Pin and Wire control over local Wi-Fi</p>
+      <p style="font-size:0.82rem; color:#9ca3af; line-height:1.45;">For Web UI Hubs provisioned by the shop with the encrypted updater. Existing plain Web 0.5.51 Hubs must be privately provisioned before they can use this update.</p>
+      <input id="package" type="file" accept=".ppx" style="margin:4px 0 8px; max-width:100%;">
+      <div><button id="download-package" type="button">Use Web 0.5.52-enc1</button> <button id="install" type="button">Install encrypted update</button> <button id="cancel" type="button" disabled>Cancel</button></div>
+      <progress id="progress" value="0" max="100" style="width:100%; margin-top:12px;"></progress>
+      <p id="status" role="status" aria-live="polite" style="font-size:0.78rem; color:#9ca3af;">Ready. Choose the update or use the published package.</p>
     </div>
   </div>
 
@@ -426,6 +426,8 @@
 
     loadList();
   </script>
+
+  <script type="module" src="./encrypted-update.mjs?v=web-0.5.52-enc1"></script>
 
   <p class="note">
     Requires Chrome 89+ or Edge 89+. Firefox and Safari are not supported.<br>

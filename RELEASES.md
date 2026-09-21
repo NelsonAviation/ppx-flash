@@ -1,16 +1,16 @@
 # Release artifacts
 
-## Web UI Hub / LED Controller Web 0.5.51 (2026-09-20)
+## Web UI Hub / LED Controller Web 0.5.52-enc1 (2026-09-21)
 
-- Source: current `Pinpoint/esp32_hub_web` firmware, built for ESP32-C3 with
-  USB CDC on boot enabled and its included custom partition layout.
-- Application: `bins/ppx_web_hub-0.5.51.bin`
-  (`5fc779672703f008f2a9b51ba3dea6944740b994eb59b924c47558ada2c8a2eb`).
-- v0.5.51 adds CSV connector imports and Android file-picker reconnect
-  recovery. It supersedes the prior Web 0.5.5 artifact in this panel.
-- This is a separate, browser-controlled local-Wi-Fi Hub firmware. It does not
-  communicate with the CrowPanel. Existing CrowPanel-compatible Hub firmware
-  remains unchanged in the LED Controller Board panel.
+- Published artifact: `Web-0.5.52-enc1.ppx` (SHA-256
+  `613a2700da34bc2b08d68a83629a47cba6e2f6b7bc4476316f43b5d17a263b07`).
+- This is the encrypted Web Serial update flow for already-provisioned Web UI
+  Hubs. The browser transports ciphertext only; it does not contain the device
+  key or a plaintext firmware image.
+- Existing plain Web 0.5.51 Hubs require private shop provisioning before they
+  can consume this package. No raw Web Hub bootstrap image is published.
+- The prior unencrypted Web 0.5.51 page link and raw assets were removed from
+  the deployed tree. CrowPanel-compatible firmware options are unchanged.
 
 ## CrowPanel v1.3.6 (2026-09-15)
 
