@@ -242,6 +242,21 @@
   </div>
 
   <div class="board-card">
+    <h2>Web UI Hub / LED Controller</h2>
+    <div class="meta">Browser-controlled Hub firmware · separate from CrowPanel-compatible firmware</div>
+    <p class="support-warning"><strong>Choose carefully:</strong> This firmware is controlled directly from its local Wi-Fi web interface. It does not communicate with the CrowPanel. Use the LED Controller Board panel below for CrowPanel-compatible firmware.</p>
+    <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">
+      <p class="step-title">Web 0.5.5 · Latest</p>
+      <p class="step-label">Browser-based Pin and Wire control over local Wi-Fi</p>
+      <esp-web-install-button manifest="manifest-web-hub-0.5.5.json?v=web-0.5.5">
+        <button slot="activate">Flash Web UI Hub Web 0.5.5</button>
+        <span slot="unsupported" style="color:#f87171">Web Serial not supported — use Chrome 89+ or Edge 89+.</span>
+        <span slot="not-allowed" style="color:#f87171">Web Serial requires a secure context. Make sure you opened this page over HTTPS.</span>
+      </esp-web-install-button>
+    </div>
+  </div>
+
+  <div class="board-card">
     <h2>LED Controller Board</h2>
     <div class="meta">Choose a production firmware release</div>
     <div class="step-block" style="border-top:none; padding-top:0; margin-top:14px;">

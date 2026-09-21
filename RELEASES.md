@@ -1,5 +1,15 @@
 # Release artifacts
 
+## Web UI Hub / LED Controller Web 0.5.5 (2026-09-20)
+
+- Source: current `Pinpoint/esp32_hub_web` firmware, built for ESP32-C3 with
+  USB CDC on boot enabled and its included custom partition layout.
+- Application: `bins/ppx_web_hub-0.5.5.bin`
+  (`f86633e898718110b41ba8d9e7e4f6c02bba226e22b6098c9ba21a9fc5e18fab`).
+- This is a separate, browser-controlled local-Wi-Fi Hub firmware. It does not
+  communicate with the CrowPanel. Existing CrowPanel-compatible Hub firmware
+  remains unchanged in the LED Controller Board panel.
+
 ## CrowPanel v1.3.6 (2026-09-15)
 
 - Source: verified customer package `PinPointX_CrowPanel_v1.3.6_Customer_Test.zip`
