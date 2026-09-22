@@ -1,12 +1,11 @@
 # Release artifacts
 
-## Web UI Hub / LED Controller Web 0.5.52-enc1 — iPad Home Screen fix (2026-09-21)
+## Web UI Hub / LED Controller Web 0.5.52-enc1 (2026-09-21)
 
-- Published artifact: `Web-0.5.52-enc1-ipad.ppx` (SHA-256
+- Published artifact: `Web-0.5.52-enc1.ppx` (SHA-256
   `cc4a746bba59cbe481172a5287aa015551346c324e8af2bfb93cc92224bb15f4`).
-- This supersedes the previous encrypted package and adds
-  `apple-mobile-web-app-capable=yes` for iPadOS 18 Home Screen standalone mode;
-  Android behavior is unchanged. The firmware still reports Web 0.5.52-enc1.
+- This supersedes the previous encrypted package. The firmware still reports
+  Web 0.5.52-enc1.
 - This is the encrypted Web Serial update flow for already-provisioned Web UI
   Hubs. The browser transports ciphertext only; it does not contain the device
   key or a plaintext firmware image.
