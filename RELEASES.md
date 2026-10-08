@@ -1,5 +1,16 @@
 # Release artifacts
 
+## Web UI Hub / LED Controller Web 0.5.53-enc1 (2026-10-07)
+
+- Published artifact: `Web-0.5.53-enc1.ppx` (SHA-256
+  `97e3cf5f89bd0de82620260d5ef24bef81afcff1403ffdd2a434de48d33620ce`).
+- This replaces the encrypted Web 0.5.52-enc1 offering. The update retries one
+  transient heartbeat failure using the existing controller session, avoiding
+  unnecessary session replacement while preserving the existing lease and
+  watchdog timings.
+- Only the encrypted package is published; no development key, private header,
+  plaintext image, or private build directory is included.
+
 ## Web UI Hub / LED Controller Web 0.5.52-enc1 (2026-09-21)
 
 - Published artifact: `Web-0.5.52-enc1.ppx` (SHA-256
