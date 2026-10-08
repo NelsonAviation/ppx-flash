@@ -8,6 +8,9 @@
   transient heartbeat failure using the existing controller session, avoiding
   unnecessary session replacement while preserving the existing lease and
   watchdog timings.
+- This improves recovery when one heartbeat response is lost, but it does not
+  fully resolve longer intermittent communication interruptions; investigation
+  of those underlying stops remains ongoing.
 - Only the encrypted package is published; no development key, private header,
   plaintext image, or private build directory is included.
 
