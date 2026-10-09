@@ -85,7 +85,7 @@ if (typeof document !== 'undefined') {
   download.onclick = async () => {
     download.disabled = true; status.textContent = 'Loading the published encrypted update…';
     try {
-      const response = await fetch('./Web-0.5.54-enc1.ppx?v=1d270f8b');
+      const response = await fetch('./Web-0.5.54-enc1.ppx?v=567bd48a');
       if (!response.ok) throw Error('The published encrypted update could not be downloaded.');
       const bytes = new Uint8Array(await response.arrayBuffer());
       validatePackage(bytes); globalThis.encryptedPackageBytes = bytes;
