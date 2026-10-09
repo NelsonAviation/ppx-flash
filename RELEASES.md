@@ -3,12 +3,15 @@
 ## Web UI Hub / LED Controller Web 0.5.54-enc1 (2026-10-08)
 
 - Published artifact: `Web-0.5.54-enc1.ppx` (SHA-256
-  `ead133a6bd11e578ffe9d8bfb84c29d202d01233483f3d2e3103e87664e62eac`).
+  `1d270f8b09352d2b7895e951d1770391315d3591fccda7c0fabb180006eb5a80`).
 - Improves HTTP server handling so idle or incomplete connections do not block
   other requests, and includes the prior same-session heartbeat retry.
-- Idle/partial-request bench tests passed. The repeat LED test still stopped
-  overnight after about 67 minutes because of missed heartbeats and session
-  expiry; intermittent disconnects are not fully resolved.
+- Repeat-mode LED tests now automatically stop after 60 seconds and blank all
+  LEDs/indicators; starting again gets a fresh 60-second run. Idle/partial-
+  request bench tests passed. Intermittent heartbeat disconnects and session
+  expiry are not fully resolved.
+- The revised package has not yet been installed or physically verified on a
+  Hub.
 - Only the encrypted package is published; no rejected peek build, keys, or
   unencrypted binaries are included.
 
