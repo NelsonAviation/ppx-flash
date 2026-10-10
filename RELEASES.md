@@ -1,5 +1,19 @@
 # Release artifacts
 
+## Web UI Hub / LED Controller Web 0.5.56-enc1 (2026-10-09)
+
+- Published artifact: `Web-0.5.56-enc1.ppx` (SHA-256
+  `a420c350f02e2999551310d8e176ac503aa3ac005027dfab103da95b3a7ca376`).
+- Validated heartbeat fix with a 3,000 ms lease, 450 ms heartbeat attempt
+  timeout, same-session transport retries, and no reconnect modal or automatic
+  LED restoration. Retains 60-second repeat limits and single-pass selected-
+  connector tests with adjustable speed and color.
+- DB78 pin75 soak ran 5h41m with no detected fault and remained visibly lit.
+  The tested build was labeled .54; this release changes only firmware version
+  labels to .56.
+- Only the encrypted package is published; no plaintext binaries, keys, or
+  provisioning kits are included.
+
 ## Web UI Hub / LED Controller Web 0.5.54-enc1 (2026-10-08)
 
 - Published artifact: `Web-0.5.54-enc1.ppx` (SHA-256

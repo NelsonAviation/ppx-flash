@@ -85,11 +85,11 @@ if (typeof document !== 'undefined') {
   download.onclick = async () => {
     download.disabled = true; status.textContent = 'Loading the published encrypted update…';
     try {
-      const response = await fetch('./Web-0.5.54-enc1.ppx?v=567bd48a');
+      const response = await fetch('./Web-0.5.56-enc1.ppx?v=a420c350');
       if (!response.ok) throw Error('The published encrypted update could not be downloaded.');
       const bytes = new Uint8Array(await response.arrayBuffer());
       validatePackage(bytes); globalThis.encryptedPackageBytes = bytes;
-      status.textContent = 'Web 0.5.54-enc1 ready. Click Install encrypted update.';
+      status.textContent = 'Web 0.5.56-enc1 ready. Click Install encrypted update.';
     } catch (error) { status.textContent = error.message; }
     finally { download.disabled = false; }
   };
